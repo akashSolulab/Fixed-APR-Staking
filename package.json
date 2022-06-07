@@ -1,0 +1,23 @@
+{
+  "name": "fixed-apr-staking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashSolulab/Fixed-APR-Staking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashSolulab/Fixed-APR-Staking/issues"
+  },
+  "homepage": "https://github.com/akashSolulab/Fixed-APR-Staking#readme",
+  "dependencies": {
+    "hardhat": "^2.9.7"
+  }
+}
