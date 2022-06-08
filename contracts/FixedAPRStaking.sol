@@ -15,7 +15,7 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     using SafeMath for uint256;
     using EnumerableSet for EnumerableSet.AddressSet;
 
-    uint public stakingEndBlock;
+    uint public stakingEndTimestamp;
 
     uint public totalStakedInPool;
 
@@ -23,7 +23,7 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
 
     IERC20Upgradeable public rewardERC20Token;
     IERC20Upgradeable public stakedStableCoin;
-    AggregatorV3Interface public chainlinkAggregatorAddress; // 0x777A68032a88E5A84678A77Af2CD65A7b3c0775a - rinkeby
+    AggregatorV3Interface public chainlinkAggregatorAddress; // 0x2bA49Aaa16E6afD2a993473cfB70Fa8559B523cF - rinkeby
 
     struct UserInfo {
         uint amountStaked;
@@ -40,12 +40,12 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
         IERC20Upgradeable _rewardERC20Token,
         IERC20Upgradeable _stakedStableCoin,
         AggregatorV3Interface _chainlinkAggregatorAddress,
-        uint _stakingEndBlock
+        uint _stakingEndTimestamp
     ) external initializer {
         rewardERC20Token = _rewardERC20Token;
         stakedStableCoin = _stakedStableCoin;
         chainlinkAggregatorAddress = _chainlinkAggregatorAddress;
-        stakingEndBlock = _stakingEndBlock;
+        stakingEndTimestamp = _stakingEndTimestamp;
         _setRewardRates();
         _setBonusRewardRates();
         __Ownable_init();
@@ -57,10 +57,12 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     function depositInPool (uint _amount) external {
         require(_amount > 0, "depositStableCoin:: amount should be greater than zero");
 
+        userInfo[msg.sender].depositDuration = block.timestamp;
+
         IERC20Upgradeable(stakedStableCoin).transferFrom(msg.sender, address(this), _amount);
 
         _updateUserInfo();
-        
+            
         userInfo[msg.sender].amountStaked = userInfo[msg.sender].amountStaked.add(_amount);
 
         totalStakedInPool = totalStakedInPool.add(_amount);
@@ -75,7 +77,7 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
 
         _updateUserInfo();
 
-        IERC20Upgradeable(stakedStableCoin).transferFrom(address(this), msg.sender, _amount);
+        IERC20Upgradeable(stakedStableCoin).transfer(msg.sender, _amount);
 
         userInfo[msg.sender].amountStaked = userInfo[msg.sender].amountStaked.sub(_amount);
 
@@ -105,7 +107,7 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     function _updateUserInfo() internal {
         uint pendingReward = _getPendingRewardAmount(msg.sender);
         if (pendingReward > 0) {
-            IERC20Upgradeable(rewardERC20Token).transferFrom(address(this), msg.sender, pendingReward);
+            IERC20Upgradeable(rewardERC20Token).transfer(msg.sender, pendingReward);
             userInfo[msg.sender].rewardEarned = userInfo[msg.sender].rewardEarned.add(pendingReward);
         }
         userInfo[msg.sender].lastRewardWithdrawl = block.timestamp;
@@ -126,13 +128,13 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
 
         uint _rewardRate;
 
-        if(block.timestamp >= userInfo[_userAddress].depositDuration.add(30 days)) {
+        if(block.timestamp <= userInfo[_userAddress].depositDuration.add(30 minutes)) {
             _rewardRate = rewardRates[0];
         }
-        else if(block.timestamp >= userInfo[_userAddress].depositDuration.add(180 days)) {
+        else if(block.timestamp <= userInfo[_userAddress].depositDuration.add(180 minutes)) {
             _rewardRate = rewardRates[1];
         }
-        else if(block.timestamp >= userInfo[_userAddress].depositDuration.add(365 days)) {
+        else if(block.timestamp <= userInfo[_userAddress].depositDuration.add(365 minutes)) {
             _rewardRate = rewardRates[2];
         }
         else {
@@ -149,7 +151,7 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
             _rewardRate = _rewardRate.add(bonusRewardRates[2]);
         }
 
-        uint totalPendingReward = stakedAmountByUser.mul(_rewardRate).mul(stakedTimeDifference).div(stakingEndBlock).div(1e4);
+        uint totalPendingReward = stakedAmountByUser.mul(_rewardRate).mul(stakedTimeDifference).div(stakingEndTimestamp).div(1e4);
         return totalPendingReward;
     }
 
