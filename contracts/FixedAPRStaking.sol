@@ -138,13 +138,13 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
         }
 
         if(stakedAmountInUSD >= 100) {
-            _rewardRate = _rewardRate.add(rewardRates[0]);
+            _rewardRate = _rewardRate.add(bonusRewardRates[0]);
         }        
         else if(stakedAmountInUSD >= 500) {
-            _rewardRate = _rewardRate.add(rewardRates[1]);
+            _rewardRate = _rewardRate.add(bonusRewardRates[1]);
         }
         else if(stakedAmountInUSD >= 1000) {
-            _rewardRate = _rewardRate.add(rewardRates[2]);
+            _rewardRate = _rewardRate.add(bonusRewardRates[2]);
         }
 
         uint totalPendingReward = stakedAmountByUser.mul(_rewardRate).mul(stakedTimeDifference).div(stakingEndBlock).div(1e4);
