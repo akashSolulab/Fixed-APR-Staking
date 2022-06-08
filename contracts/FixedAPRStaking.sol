@@ -55,15 +55,16 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 
     function depositInPool (uint _amount) external {
+        UserInfo memory user = userInfo[msg.sender];
         require(_amount > 0, "depositStableCoin:: amount should be greater than zero");
 
-        userInfo[msg.sender].depositDuration = block.timestamp;
+        user.depositDuration = block.timestamp;
 
         IERC20Upgradeable(stakedStableCoin).transferFrom(msg.sender, address(this), _amount);
 
         _updateUserInfo();
-            
-        userInfo[msg.sender].amountStaked = userInfo[msg.sender].amountStaked.add(_amount);
+        
+        user.amountStaked = user.amountStaked.add(_amount);
 
         totalStakedInPool = totalStakedInPool.add(_amount);
 
@@ -73,13 +74,14 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     }
 
     function withdrawFromPool(uint _amount) external {
+        UserInfo memory user = userInfo[msg.sender];
         require(_amount <= userInfo[msg.sender].amountStaked, "withdrawFromPool:: can not withdraw more than your staked amount");
 
         _updateUserInfo();
 
         IERC20Upgradeable(stakedStableCoin).transfer(msg.sender, _amount);
 
-        userInfo[msg.sender].amountStaked = userInfo[msg.sender].amountStaked.sub(_amount);
+        user.amountStaked = user.amountStaked.sub(_amount);
 
         totalStakedInPool = totalStakedInPool.sub(_amount);
 
@@ -90,6 +92,11 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
 
     function claimERC20RewardTokens() external {
         _updateUserInfo();
+    }
+
+    function getPendingReward(address _userAddress) external view returns(uint) {
+        uint pendingAmount = _getPendingRewardAmount(_userAddress);
+        return pendingAmount; 
     }
 
     function _setRewardRates() internal {
@@ -105,37 +112,36 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     }
 
     function _updateUserInfo() internal {
+        UserInfo memory user = userInfo[msg.sender];
         uint pendingReward = _getPendingRewardAmount(msg.sender);
         if (pendingReward > 0) {
             IERC20Upgradeable(rewardERC20Token).transfer(msg.sender, pendingReward);
-            userInfo[msg.sender].rewardEarned = userInfo[msg.sender].rewardEarned.add(pendingReward);
+            user.rewardEarned = user.rewardEarned.add(pendingReward);
         }
-        userInfo[msg.sender].lastRewardWithdrawl = block.timestamp;
+        user.lastRewardWithdrawl = block.timestamp;
     }
 
     function _getPendingRewardAmount(address _userAddress) internal view returns(uint) {
+        UserInfo memory user = userInfo[msg.sender];
         if(!stakeHoldersList.contains(_userAddress)) {
             return 0;
         }
 
-        if(userInfo[_userAddress].amountStaked == 0) {
+        if(user.amountStaked == 0) {
             return 0;
         }
 
-        uint stakedTimeDifference = block.timestamp.sub(userInfo[_userAddress].lastRewardWithdrawl);
-        uint stakedAmountByUser = userInfo[_userAddress].amountStaked;
+        uint stakedTimeDifference = block.timestamp.sub(user.lastRewardWithdrawl);
+        uint stakedAmountByUser = user.amountStaked;
         uint stakedAmountInUSD = stakedAmountByUser.mul(uint256(_convertAmountToUSD())).div(1e8);
 
         uint _rewardRate;
 
-        if(block.timestamp <= userInfo[_userAddress].depositDuration.add(30 minutes)) {
+        if(block.timestamp <= user.depositDuration.add(30 minutes)) {
             _rewardRate = rewardRates[0];
         }
-        else if(block.timestamp <= userInfo[_userAddress].depositDuration.add(180 minutes)) {
+        else if(block.timestamp > user.depositDuration.add(30 minutes) && block.timestamp <= user.depositDuration.add(180 minutes)) {
             _rewardRate = rewardRates[1];
-        }
-        else if(block.timestamp <= userInfo[_userAddress].depositDuration.add(365 minutes)) {
-            _rewardRate = rewardRates[2];
         }
         else {
             _rewardRate = rewardRates[2];
