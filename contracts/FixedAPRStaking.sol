@@ -36,8 +36,6 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
     mapping(uint => uint) public bonusRewardRates;
     mapping(address => UserInfo) public userInfo;
 
-    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
-
     function initialize (
         IERC20Upgradeable _rewardERC20Token,
         IERC20Upgradeable _stakedStableCoin,
@@ -50,7 +48,11 @@ contract StableCoinStaking is Initializable, OwnableUpgradeable, UUPSUpgradeable
         stakingEndBlock = _stakingEndBlock;
         _setRewardRates();
         _setBonusRewardRates();
+        __Ownable_init();
+        __UUPSUpgradeable_init();
     }
+
+    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 
     function depositInPool (uint _amount) external {
         require(_amount > 0, "depositStableCoin:: amount should be greater than zero");
