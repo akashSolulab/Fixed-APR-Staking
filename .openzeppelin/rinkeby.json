@@ -5,6 +5,171 @@
       "address": "0x4411ec55120a30a547a86A9083FD06536f317405",
       "txHash": "0xd66499988aa78310a5d10676045b3312c5d38908ca1f282392353afb0892c72c",
       "kind": "uups"
+    },
+    {
+      "address": "0xb3693cE9C3DbF419690c1e4F39dD4b5BBfAc6e1D",
+      "txHash": "0x5005c9e45bcc58ee94ec5044ea97b3dece7ca0cd06ba2e897437a83954c44e5e",
+      "kind": "uups"
+    },
+    {
+      "address": "0x4b1de42e83c33Ed111d5Fa3266d49Cb274bE6A2c",
+      "txHash": "0xdee065bc75d40d9219db8c573c502bb223deeff3c2677225f945c0a7b447c1ec",
+      "kind": "uups"
+    },
+    {
+      "address": "0xbB53910CBE3D3BF2863a66e4E2eD044E4166b83e",
+      "txHash": "0x3102b8f762cf82f24da4b74037331b65c476fe5472858a9f5c884ff6a4ca24c9",
+      "kind": "uups"
+    },
+    {
+      "address": "0x662ed47e31868eB2dC87412089F931E8C397605f",
+      "txHash": "0xca6cd25471b77f4314de2cec742fed0a7ffe5d56c3de38a1d1718fa2159b9e49",
+      "kind": "uups"
+    },
+    {
+      "address": "0xf0bDEdFBBd1F0303C91d81253ba2bF10c667f6af",
+      "txHash": "0xff7d0124e59314dcc3aa97b170728ca9bed20544c1e5daa9f7aceca1d2e1b044",
+      "kind": "uups"
+    },
+    {
+      "address": "0xc7ee0F53BC221bB37B87eB5Ca3C614De20cF10b9",
+      "txHash": "0x72d3a0e3f1cde1add78ba89404ed8164cc31574ef23892e1fb42adcab127f084",
+      "kind": "uups"
+    },
+    {
+      "address": "0x24eF8A1Eee7a33C11Ee3819e978bAA9922B27de0",
+      "txHash": "0x6022312209b787f30ba9cbd99b8f666d68c5a30116980e4aa61dbf5c7b86c6ed",
+      "kind": "uups"
+    },
+    {
+      "address": "0xB8d1F7005d7e5B8A63884E1d562120c485f9d1aA",
+      "txHash": "0x33b0838243303b805b7f80138893d9f632a93af1cfa50c361d3aadea48189c0e",
+      "kind": "uups"
+    },
+    {
+      "address": "0xdF25d30d87e4A26E02f5D77b4A71d2C42C6bDA73",
+      "txHash": "0xa7ea52bff7edd3ced5d1080d2bc8f1e2d8c3397027420b594cb6d6e3c17bd10b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2E43d0980175A57b137A5Ff905Ac6e04BC4f992F",
+      "txHash": "0xae6ffdc4fcaa83ed3408cc7a1c3e5fec3f9d4dc5c3d678d5a1618f6fdbb2c35c",
+      "kind": "uups"
+    },
+    {
+      "address": "0x3268d7acDeee0422Ad6722A253A77402cA9D75d2",
+      "txHash": "0xc901cc7af8f9681ee501cbab5507705260011e65b7ff1635220c372baffcd969",
+      "kind": "uups"
+    },
+    {
+      "address": "0xEb5926E2aA378c69127cdf90754109bA3784791B",
+      "txHash": "0x0591442b1dbc62e0dc306583e18b942b3da060f479ee637234339859444434fc",
+      "kind": "uups"
+    },
+    {
+      "address": "0xdD2bF853C0902B32cb19EFF62117F5Ed9d94A041",
+      "txHash": "0x6809e20f6f6ac9f955039398ce1a6ca83c8c92252a3bd33589ac12ee6cd8923f",
+      "kind": "uups"
+    },
+    {
+      "address": "0x29210Fc51c0d5799b814dd98704E3A04215e1637",
+      "txHash": "0x7846e59c2fbcdd6c80bba2c316c5c96ef2507c375638a2bcf1aaca522fd5905b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x00e10EAFfe08cFA8788f0Ead745C5d61F0b42d27",
+      "txHash": "0x71147b64daa9aef3a733ff60c7e9bd78704c6b140ca1e2b23a769d2c23791d73",
+      "kind": "uups"
+    },
+    {
+      "address": "0x46799869aFb96b1F976B383D8E300af19faBeB21",
+      "txHash": "0xbf794d64e914b61fcbda07e679ccfd696ed9208fe80697699646433fc128eed1",
+      "kind": "uups"
+    },
+    {
+      "address": "0x6901848Ea09702302448cB94343Bce04483dfc12",
+      "txHash": "0x8b07e73f04fdbe08eaf6e283979b11dbb1aaf6de855d510d2f8ad12167fa22bb",
+      "kind": "uups"
+    },
+    {
+      "address": "0x1F4f86D7BF7c8Bbcab493c82571b2121E9DD7C4a",
+      "txHash": "0x582820e388b4f12749282b4d1ce79a9c65006d4af701222ecb7b4a7e3eff11a8",
+      "kind": "uups"
+    },
+    {
+      "address": "0xD860a11B0b18DBC9DDBD837ACF46a1B52ca0498F",
+      "txHash": "0x6b59b15baf69ae2259a15fb1faab1d5b5334e575cdda2a2f1d8407df8592888b",
+      "kind": "uups"
+    },
+    {
+      "address": "0x5DF161D87CD1D5643e1F261B0Bb937DDb9cB864E",
+      "txHash": "0xeb2000ce738e5c86b0c4efb016265ba128e8b92b80f9e85c31c4223cd4eaac98",
+      "kind": "uups"
+    },
+    {
+      "address": "0x13D197857dB5c8730f165F2C9dBbd73399e54722",
+      "txHash": "0xef7ebc2a4ccc28ed228e4fb4ffff8b0e3f6a56211097ed86a54797da6bae039c",
+      "kind": "uups"
+    },
+    {
+      "address": "0x5cF141764eE77f8841a8c5B161F7A69Ca779A119",
+      "txHash": "0x38e6894dc3a24192c9230bab1b69f3b6e759d09d4af6e28a455d855642120715",
+      "kind": "uups"
+    },
+    {
+      "address": "0x7F097cFb52f6EAC628d4655E14B2b1dE08200733",
+      "txHash": "0x75ce60004e0e6b96fce7b25d029650476d681342450ee34cc6e8d6203bd82476",
+      "kind": "uups"
+    },
+    {
+      "address": "0xB0715DA158Ee43c1c51e5c5c8156A20f8F1989e9",
+      "txHash": "0x392d95a9bdc58f75b7a48772f2b5cdc5e002a26b44ed7329bff5b90ba17627b2",
+      "kind": "uups"
+    },
+    {
+      "address": "0x4F880EB5c8eA1a8147c76053f114D0895a643093",
+      "txHash": "0x5acdfcdfb04abcd7912c17f7ef6d67df3aed15cfe221dd075e22ad97cc3c9614",
+      "kind": "uups"
+    },
+    {
+      "address": "0x8fD84DD5B225AA3B9eC550EDBB1757aC7cF0eA1b",
+      "txHash": "0x2332f083139af8baa7cde088a92cecd300466bc2eefc00c4e11a982a1bd0258c",
+      "kind": "uups"
+    },
+    {
+      "address": "0xaa5890Ebf816d5Cc541d0B32fEF2D3559bc58702",
+      "txHash": "0xf3805110afb7ac21ae16f63b77fae3b911be47df87986e7ccdb92f24e15ca004",
+      "kind": "uups"
+    },
+    {
+      "address": "0x9fcd99524A722d220784cD48B6F56c81B0F74af6",
+      "txHash": "0xe6e434c027a7381732369e33616d3c89aef2f918e676bd2dca97d55359022a56",
+      "kind": "uups"
+    },
+    {
+      "address": "0x96788ACd9B1CFe794F7599BB6567a6c8B6DE301E",
+      "txHash": "0x0c72165cd2fcba1ac464a642021eb0d3a0304cc6da23163dea8be0b4ca09ff04",
+      "kind": "uups"
+    },
+    {
+      "address": "0x13C31558DA0d128D87Ea329623C69f8392A3816E",
+      "txHash": "0x5882f4c99851b342fb4df29150c8941169dc348acdf116fc2406855ef03b7e13",
+      "kind": "uups"
+    },
+    {
+      "address": "0xE06952ffEBd333D2cF68516284C83892789B548E",
+      "txHash": "0x665148428863e7ee7558cf69918794a26e6a9747367ba3917c6a482bb441f62b",
+      "kind": "uups"
+    },
+    {
+      "address": "0xaDff3176c2C7Ed96e459E0Bc73691a4925e676d7",
+      "txHash": "0x37ebf2fd7deabba6150bf2fc31dc88013ea2c3e348d5bff700f4865c0dcc7554",
+      "kind": "uups"
+    },
+    {
+      "address": "0x775F2E754CBC2720badB4fa812C8bff3546D6a4c",
+      "txHash": "0x763f9b94041e0f96a64ca6cce04910e659501cd5bcd3195bf2e39b6dcc1c8c3e",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -721,6 +886,257 @@
             "numberOfBytes": "64"
           },
           "t_struct(UserInfo)2258_storage": {
+            "label": "struct StableCoinStaking.UserInfo",
+            "members": [
+              {
+                "label": "amountStaked",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "depositDuration",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "rewardEarned",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "lastRewardWithdrawl",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "f08314d337e4ed73d9eddbe66107001bb092bddfcb22672b4e19346eb1e7a768": {
+      "address": "0xda679957DB823ec07340C0B56617bf4fF5b704Ba",
+      "txHash": "0x722a2e05bb9527aa1dc6140f83f5ae330dafb493e1ff05738f8f88287988bb92",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:87"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:211"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:107"
+          },
+          {
+            "label": "stakingEndTimestamp",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_uint256",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:18"
+          },
+          {
+            "label": "totalStakedInPool",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_uint256",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:20"
+          },
+          {
+            "label": "stakeHoldersList",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_struct(AddressSet)2634_storage",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:22"
+          },
+          {
+            "label": "rewardERC20Token",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_contract(IERC20Upgradeable)914",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:24"
+          },
+          {
+            "label": "stakedStableCoin",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_contract(IERC20Upgradeable)914",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:25"
+          },
+          {
+            "label": "chainlinkAggregatorAddress",
+            "offset": 0,
+            "slot": "207",
+            "type": "t_contract(AggregatorV3Interface)45",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:26"
+          },
+          {
+            "label": "rewardRates",
+            "offset": 0,
+            "slot": "208",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:35"
+          },
+          {
+            "label": "bonusRewardRates",
+            "offset": 0,
+            "slot": "209",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:36"
+          },
+          {
+            "label": "userInfo",
+            "offset": 0,
+            "slot": "210",
+            "type": "t_mapping(t_address,t_struct(UserInfo)2969_storage)",
+            "contract": "StableCoinStaking",
+            "src": "contracts/FixedAPRStaking.sol:37"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(AggregatorV3Interface)45": {
+            "label": "contract AggregatorV3Interface",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC20Upgradeable)914": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(UserInfo)2969_storage)": {
+            "label": "mapping(address => struct StableCoinStaking.UserInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AddressSet)2634_storage": {
+            "label": "struct EnumerableSet.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)2333_storage",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Set)2333_storage": {
+            "label": "struct EnumerableSet.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(UserInfo)2969_storage": {
             "label": "struct StableCoinStaking.UserInfo",
             "members": [
               {

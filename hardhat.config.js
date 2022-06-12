@@ -1,5 +1,6 @@
 require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-waffle");
+require('hardhat-docgen');
 require('dotenv').config();
 
 
@@ -27,8 +28,12 @@ module.exports = {
   networks: {
     rinkeby: {
       url: process.env.ALCHEMY_RPC_URL,
-      accounts: [process.env.SIGNER_PRIV_KEY]
+      accounts: [process.env.SIGNER_PRIV_KEY],
+      timeout: 15000000
     }
+  },
+  mocha: {
+    timeout: 21000000,
   },
   etherscan: {
     apiKey: {
